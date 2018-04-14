@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Game On</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/global.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/form.css" />
+  <script src="../js/form.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+
+<body onload="onLoad()">
+  <div id="main_menu" class="horizontal-navigation">
+    <script>mainScript.generateHeaderMenu()</script>
+  </div>
+
+  <div class="form">
+    <div class="buble">
+      <div class="title">
+        <h1>My profile</h1>
+      </div>
+      <div class="form-group">
+        <img src="../resources/profile.png" alt="Snow" height="200" width="200" align="middle">
+        <div class="buttonHolder">
+            <a href="./index.html" onclick="onClick('update')">
+              <button type="submit" class="button">Update profile pic</button>
+            </a>
+        </div>
+      </div>
+
+         <form id="sessionInputForm">
+
+          <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Enter new name ...">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="emailInput" placeholder="Enter new email...">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Password:</label>
+            <input type="password" class="form-control" id="passInput" placeholder="Enter new passsword...">
+          </div>
+
+          <div class="buttonHolder">
+            <a href="./index.html" onclick="onClick('update')">
+              <button type="submit" class="button">Update profile</button>
+            </a>
+          </div>
+      </form>
+      </div>
+      
+      <div class="buble">
+        <div class="title">
+          <h1>My favourites</h1>
+        </div>
+          <div class="form-group">
+            <label for="topLocation">Location: FMI!</label>
+          </div>
+          <div class="form-group">
+            <label for="topGame">Game: Don't be angry, man (the game)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

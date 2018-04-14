@@ -11,7 +11,11 @@ function setMinDate() {
 	inputDate.value = d
 }
 
-function onClick() {
-	alert("You created successfully event!");
-	window.location.href = './create-session.html';
+function onClick(opt) {
+
+	if(opt === 'event') {
+		alert("You created successfully event!");
+	} else if (opt === 'update') {
+		alert("You updated your profile successfully!");
+	}
 }

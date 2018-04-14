@@ -36,3 +36,7 @@ select:hover {
     background-color: #1a8c9bc4;
     color: white
 }
+
+img {
+    border-radius: 50%;
+}
