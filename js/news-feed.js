@@ -29,6 +29,7 @@ var indexPage = function newsFeed() {
         var hasOrHave = notification.participants.length > 1 ? " have " : " has ";
         var participants = createField(stringifyParticipants(notification.participants) + hasOrHave + "decided to join");
         var game = createField(notification.description);
+        var button = createJoinButton();
 
         notificationElement.appendChild(title);
         notificationElement.appendChild(creator);
@@ -36,6 +37,7 @@ var indexPage = function newsFeed() {
         notificationElement.appendChild(time);
         notificationElement.appendChild(participants);
         notificationElement.appendChild(game);
+        notificationElement.appendChild(button);
 
         return notificationElement;
     }
@@ -47,10 +49,12 @@ var indexPage = function newsFeed() {
         var location = createField("Place: " + notification.location);
         var date = createField("On: " + notification.date + "From: " + notification.from + " to: " + notification.to);
         var description = createField(notification.description);
+        var button = createJoinButton();
 
         notificationElement.appendChild(location);
         notificationElement.appendChild(date);
         notificationElement.appendChild(description);
+        notificationElement.appendChild(button);
 
         return notificationElement;
     }
@@ -68,6 +72,7 @@ var indexPage = function newsFeed() {
         var description = createField(notification.description);
         var hasOrHave = notification.participants.length > 1 ? " have " : " has ";
         var participants = createField(stringifyParticipants(notification.participants) + hasOrHave + "decided to join");
+        var button = createJoinButton();
 
         notificationElement.appendChild(game);
         notificationElement.appendChild(creator);
@@ -77,8 +82,22 @@ var indexPage = function newsFeed() {
         notificationElement.appendChild(rules);
         notificationElement.appendChild(participants);
         notificationElement.appendChild(description);
+        notificationElement.appendChild(button)
 
         return notificationElement;
+    }
+
+    function createJoinButton() {
+        var div = document.createElement("div");
+        div.setAttribute("class", "buttonHolder");
+
+        var button = document.createElement("button");
+        button.setAttribute("class", "button");
+        button.setAttribute("onClick", "alert('Sending request to server')")
+        button.innerText = "Join";
+
+        div.appendChild(button);
+        return div;
     }
 
     function stringifyParticipants(participants) {
