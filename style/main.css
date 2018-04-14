@@ -1,0 +1,12 @@
+body {
+    background-image: url("../resources/background.jpg");
+    background-color: #000000;
+    background-size: cover;
+ }
+
+ #inner-background{
+     background-color: #edf0ca;
+     background-size: cover;    
+     padding: 20px;
+     border-radius: 25px;
+ }
