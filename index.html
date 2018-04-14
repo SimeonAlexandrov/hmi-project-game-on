@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/global.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/newsfeed.css" />
-    <script src="main.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/news-feed.js"></script>
 </head>
 
 <body>
@@ -30,18 +32,27 @@
             <div class="title">
                 <h1>Sessions</h1>
             </div>
-            <div class="buble">
-                <p>Test one</p>
+            <div id="news_notifications">
+                <script>mainPage.getNotifications()</script>
             </div>
         </div>
         <div class="events">
             <div class="title">
-            <h1> Events </h1>                
+                <h1> Events </h1>
             </div>
-            <div class="buble">
-                <p>Test two</p>
+            <div id="events_notifications">
+                <script>mainPage.getEvents()</script>
             </div>
         </div>
+        <div class="tournaments">
+            <div class="title">
+                <h1> Tournaments </h1>
+            </div>
+            <div id="tournament_notifications">
+                <script>mainPage.getTournaments()</script>
+            </div>
+        </div>
+
     </div>
 
 </body>

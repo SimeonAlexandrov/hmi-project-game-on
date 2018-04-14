@@ -7,13 +7,32 @@
 }
 
 .news{
+   align-self: center;
    float: left;
    margin: 20px;
    margin-top: 0px;
 }
 
 .events{
+   align-self: center;
    float: left;
    margin: 20px;
    margin-top: 0px;
+}
+
+.tournaments{
+    align-content: center;
+    float: left;
+    margin: 20px;
+    margin-top: 0px;     
+}
+
+.title_field{
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.field{
+    text-align: center;
+    padding-bottom: 1px;
 }
