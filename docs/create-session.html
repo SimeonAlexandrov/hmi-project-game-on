@@ -6,11 +6,26 @@
     <title>Game On</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/global.css" />
     <script src="../js/create-session.js"></script>
 </head>
 
 <body onload="onLoad()">
-    <div id="inner-background">
+	<div class="horizontal-navigation">
+        <a>Game On</a>
+        <a>Clubs</a>
+        <a>Game sessions</a>
+        <a>Create Tournament</a>
+        <a href="./docs/create-session.html">Create Session</a>
+        <a>Create Promo</a>
+        <a>Who's playing</a>
+        <a>See Profile</a>
+    </div>
+    <div style="position: relative;">
+    </div>
+
+
+    <div id="buble">
       <div>
         <h1>Create new session:</h1>
         <form id="sessionInputForm">
@@ -42,7 +57,9 @@
             <label for="sessionDescInput">Description</label>
             <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
           </div>
-          <button type="submit" class="button">Add</button>
+          <a href="../index.html">
+            <button type="submit" class="button">Add</button>
+      	  </a>
     	</form>
     	</div>
     </div>
