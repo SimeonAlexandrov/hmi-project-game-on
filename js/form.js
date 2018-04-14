@@ -12,6 +12,6 @@ function setMinDate() {
 }
 
 function onClick() {
-	alert("You created successfully event!");
+	alert("You created successfully event!").;
 	window.location.href = './create-session.html';
 }

@@ -108,21 +108,22 @@ var mainPage = function newsFeed() {
                 "creator": "Petko",
                 "participants": ["Marin", "Alex", "Pesho"],
                 "location": "Trite trola",
-                "time": "2018-04-12T18:30:00",
+                "time": "2018-04-12 18:30:00",
                 "game": "Catan"
             }, {
                 "description": "Playing Catan, tournament preparation",
                 "creator": "Ivan",
                 "participants": ["Stoqn", "Petko", "Iva", "Jana"],
                 "location": "Trite trola",
-                "time": "2018-04-20T19:00:00",
+                "time": "2018-04-20 19:00:00",
                 "game": "Catan"
             }, {
                 "description": "Smalltalk with smallworld",
                 "creator": "Tervel",
                 "participants": ["Antoniq"],
                 "location": "Abordage",
-                "time": "2018-04-19T12:30:00"
+                "time": "2018-04-19 12:30:00",
+                "game": "Small world"
             }
         ];
         return JSON.stringify(notifications);
