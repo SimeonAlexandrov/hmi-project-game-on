@@ -20,7 +20,7 @@
         <a>Game sessions</a>
         <a href="./create-tournament.html">Create Tournament</a>
         <a href="./create-session.html">Create Session</a>
-        <a href="./create-promo.html">Create Promo</a>
+        <a>Create Promo</a>
         <a>Who's playing</a>
         <a>See Profile</a>
     </div>
@@ -28,7 +28,7 @@
     <div class="form">
       <div class="buble">
       	<div class="title">
-        	<h1>Create new session:</h1>
+        	<h1>Create new promo:</h1>
     	  </div>
           <form id="sessionInputForm">
 
@@ -50,6 +50,7 @@
               </select>
             </div>
 
+
             <div class="form-group">
               <label for="sessionDateInput"> Date: </label>
               <input type="date" id="dateInput" class="form-control">
@@ -57,15 +58,26 @@
             </div>
 
             <div class="form-group">
+              <label for="sessionDate">From:</label>
+              <input type="time" id="dateInput" class="form-control" name="timepicker" value="13:30"> 
+            </div>
+
+            <div class="form-group">
+              <label for="sessionDate">To:</label>
+              <input type="time" id="dateInput" class="form-control" name="timepicker" value="14:30"> 
+            </div>
+
+            <div class="form-group">
               <label for="sessionDescInput">Description:</label>
               <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
             </div>
+            
             <div class="buttonHolder">
               <a href="../index.html" onclick="onClick()">
                 <button type="submit" class="button">Add</button>
-          	  </a>
+              </a>
             </div>
-          </form>
+    	    </form>
       </div>
     </div>
 </body>

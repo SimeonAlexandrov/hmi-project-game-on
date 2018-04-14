@@ -1,11 +1,13 @@
 .title{
     margin: 20px;
-    background-color: #ecdcb9;
+    background-color:  #1a8c9bc4;
     border-radius: 25px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    color: white;
+    text-align: center;
     left: 0;
     right: 0;
     text-align: center;
