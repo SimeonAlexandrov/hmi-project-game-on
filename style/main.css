@@ -1,42 +1,22 @@
-body {
-    background-image: url("../resources/background.jpg");
-    background-color: #000000;
-    background-size: cover;
- }
-
- .inner-background{
-     background-color: #edf0ca;
-     background-size: cover;    
-     padding: 20px;
-     border-radius: 25px;
-     position: absolute;
-     top: 15%;
- }
-
-.horizontal-navigation {
-    overflow: hidden;
-    background-color: #1a8c9bc4;    
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
+.title{
+    margin: 20px;
+    background-color: #ecdcb9;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     left: 0;
-    padding: -1em;
-    display:inline-block
+    right: 0;
 }
-    
-.horizontal-navigation a {
-    float: left;
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px 15px;
-    text-decoration: none;
-    font-size: 2em;
-    line-height: 70px;
-}
-    
-.horizontal-navigation a:hover {
-    background: #14576bb4;
-    color: #ffffff;
-}
+
+ .buble{
+     background-color: #edf0ca;
+     background-size: auto;    
+     padding: 10px;
+     border-radius: 25px;
+     position: relative;
+     top: 5%;
+     margin-top: 2%;
+     margin-bottom: 2%;
+ }

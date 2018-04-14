@@ -1,0 +1,19 @@
+.feed{
+    z-index: 1;
+   position: relative;
+   margin: 20px;
+   margin-top: 80px;
+   margin-bottom: 2%;
+}
+
+.news{
+   float: left;
+   margin: 20px;
+   margin-top: 0px;
+}
+
+.events{
+   float: left;
+   margin: 20px;
+   margin-top: 0px;
+}
