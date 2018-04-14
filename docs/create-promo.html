@@ -14,22 +14,22 @@
 </head>
 
 <body onload="onLoad()">
-  <div class="horizontal-navigation">
+	<div class="horizontal-navigation">
         <a>Game On</a>
         <a>Clubs</a>
         <a>Game sessions</a>
         <a href="./create-tournament.html">Create Tournament</a>
         <a href="./create-session.html">Create Session</a>
-        <a  href="./create-promo.html">Create Promo</a>
+        <a>Create Promo</a>
         <a>Who's playing</a>
         <a>See Profile</a>
     </div>
 
     <div class="form">
       <div class="buble">
-        <div class="title">
-          <h1>Create new tournament:</h1>
-        </div>
+      	<div class="title">
+        	<h1>Create new promo:</h1>
+    	  </div>
           <form id="sessionInputForm">
 
             <div class="form-group">
@@ -50,6 +50,7 @@
               </select>
             </div>
 
+
             <div class="form-group">
               <label for="sessionDateInput"> Date: </label>
               <input type="date" id="dateInput" class="form-control">
@@ -57,17 +58,18 @@
             </div>
 
             <div class="form-group">
-              <label for="sessionDescInput">Description:</label>
-              <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
-            </div>
-            <div class="form-group">
-              <label for="sessionRulesInput">Rules:</label>
-              <input type="text" class="form-control" id="sessionRulesInput" placeholder="Describe the gaming session ...">
+              <label for="sessionDate">From:</label>
+              <input type="time" id="dateInput" class="form-control" name="timepicker" value="13:30"> 
             </div>
 
             <div class="form-group">
-              <label for="sessionPrizeInput">Prizes:</label>
-              <input type="text" class="form-control" id="sessionPrizeInput" placeholder="Describe the prizes of the tournament ...">
+              <label for="sessionDate">To:</label>
+              <input type="time" id="dateInput" class="form-control" name="timepicker" value="14:30"> 
+            </div>
+
+            <div class="form-group">
+              <label for="sessionDescInput">Description:</label>
+              <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
             </div>
             
             <div class="buttonHolder">
@@ -75,7 +77,7 @@
                 <button type="submit" class="button">Add</button>
               </a>
             </div>
-          </form>
+    	    </form>
       </div>
     </div>
 </body>

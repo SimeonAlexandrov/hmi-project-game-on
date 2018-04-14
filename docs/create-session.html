@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../style/global.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../style/form.css" />
-    <script src="../js/create-session.js"></script>
+    <script src="../js/form.js"></script>
 </head>
 
 <body onload="onLoad()">
@@ -20,7 +20,7 @@
         <a>Game sessions</a>
         <a href="./create-tournament.html">Create Tournament</a>
         <a href="./create-session.html">Create Session</a>
-        <a>Create Promo</a>
+        <a href="./create-promo.html">Create Promo</a>
         <a>Who's playing</a>
         <a>See Profile</a>
     </div>
@@ -60,11 +60,12 @@
               <label for="sessionDescInput">Description:</label>
               <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
             </div>
-            
-            <a href="../index.html">
-              <button type="submit" class="button">Add</button>
-        	  </a>
-    	    </form>
+            <div class="buttonHolder">
+              <a href="../index.html" onclick="onClick()">
+                <button type="submit" class="button">Add</button>
+          	  </a>
+            </div>
+          </form>
       </div>
     </div>
 </body>

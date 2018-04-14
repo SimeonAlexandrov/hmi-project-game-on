@@ -12,7 +12,7 @@
     margin-top: 2px;
     padding-right: 10px;
     margin-bottom: 2px;
-    width: 100%;
+    width: 95%;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
@@ -47,13 +47,16 @@ select {
     background-color: #edf0ca;
 }
 select:hover {
-
+    position: relative;
     background-color: #1a8c9bc4;
     color: white
 }
+
+
+
 input {
     position: relative;
-    width: 100%;
+    width: 95%;
 	background-color: #edf0ca;
 	border: none;
     padding: 10px;
@@ -66,4 +69,9 @@ input {
 input:hover {
     background-color: #1a8c9bc4;
     color: white
+}
+ 
+.buttonHolder {
+    display: flex; 
+    justify-content: center;
 }
