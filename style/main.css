@@ -4,9 +4,39 @@ body {
     background-size: cover;
  }
 
- #inner-background{
+ .inner-background{
      background-color: #edf0ca;
      background-size: cover;    
      padding: 20px;
      border-radius: 25px;
+     position: absolute;
+     top: 15%;
  }
+
+.horizontal-navigation {
+    overflow: hidden;
+    background-color: #1a8c9bc4;    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    padding: -1em;
+    display:inline-block
+}
+    
+.horizontal-navigation a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 2em;
+    line-height: 70px;
+}
+    
+.horizontal-navigation a:hover {
+    background: #14576bb4;
+    color: #ffffff;
+}
