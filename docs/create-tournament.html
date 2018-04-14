@@ -2,74 +2,79 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Game On</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/global.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/form.css" />
-    <script src="../js/form.js"></script>
-    <script src="../js/main.js"></script>
+  <meta charset="utf-8" />
+  <title>Game On</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/global.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../style/form.css" />
+  <script src="../js/form.js"></script>
+  <script src="../js/main.js"></script>
 </head>
 
 <body onload="onLoad()">
-    <div id="main_menu" class="horizontal-navigation">
-        <script>mainScript.generateHeaderMenu()</script>
-    </div>
+  <div id="main_menu" class="horizontal-navigation">
+    <script>mainScript.generateHeaderMenu()</script>
+  </div>
 
-    <div class="form">
-      <div class="buble">
-        <div class="title">
-          <h1>Create new tournament:</h1>
-        </div>
-          <form id="sessionInputForm">
-
-            <div class="form-group">
-              <label for="gameLocation">Location:</label>
-              <select class="form-control" id="sessionLocationInput">
-                <option value="TriteTrola">Trite trola</option>
-                <option value="Abordage">Abordage</option>
-                <option value="FMI100">FMI 100</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="sessionType">Game type:</label>
-              <select class="form-control" id="sessionTypeInput">
-                <option value="Catan">Catan</option>
-                <option value="Smallworld">Smallworld</option>
-                <option value="Belot">Belot</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="sessionDateInput"> Date: </label>
-              <input type="date" id="dateInput" class="form-control">
-              <br>
-            </div>
-
-            <div class="form-group">
-              <label for="sessionDescInput">Description:</label>
-              <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
-            </div>
-            <div class="form-group">
-              <label for="sessionRulesInput">Rules:</label>
-              <input type="text" class="form-control" id="sessionRulesInput" placeholder="Describe the gaming session ...">
-            </div>
-
-            <div class="form-group">
-              <label for="sessionPrizeInput">Prizes:</label>
-              <input type="text" class="form-control" id="sessionPrizeInput" placeholder="Describe the prizes of the tournament ...">
-            </div>
-            
-            <div class="buttonHolder">
-              <a href="../index.html" onclick="onClick()">
-                <button type="submit" class="button">Add</button>
-              </a>
-            </div>
-          </form>
+  <div class="form">
+    <div class="buble">
+      <div class="title">
+        <h1>Create new tournament:</h1>
       </div>
+      <form id="sessionInputForm">
+
+        <div class="form-group">
+          <label for="gameLocation">Location:</label>
+          <select class="form-control" id="sessionLocationInput">
+            <option value="TriteTrola">Trite trola</option>
+            <option value="Abordage">Abordage</option>
+            <option value="FMI100">FMI 100</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sessionType">Game type:</label>
+          <select class="form-control" id="sessionTypeInput">
+            <option value="Catan">Catan</option>
+            <option value="Smallworld">Smallworld</option>
+            <option value="Belot">Belot</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sessionDateInput"> Date: </label>
+          <input type="date" id="dateInput" class="form-control">
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="sessionDate">From:</label>
+          <input type="time" id="dateInput" class="form-control" name="timepicker" value="13:30">
+        </div>
+
+        <div class="form-group">
+          <label for="sessionDescInput">Description:</label>
+          <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
+        </div>
+        <div class="form-group">
+          <label for="sessionRulesInput">Rules:</label>
+          <input type="text" class="form-control" id="sessionRulesInput" placeholder="Describe the gaming session ...">
+        </div>
+
+        <div class="form-group">
+          <label for="sessionPrizeInput">Prizes:</label>
+          <input type="text" class="form-control" id="sessionPrizeInput" placeholder="Describe the prizes of the tournament ...">
+        </div>
+
+        <div class="buttonHolder">
+          <a href="../index.html" onclick="onClick()">
+            <button type="submit" class="button">Add</button>
+          </a>
+        </div>
+      </form>
     </div>
+  </div>
 </body>
 
 </html>

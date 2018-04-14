@@ -13,6 +13,6 @@ var mainScript = function () {
     }
 
     return {
-        generateHeaderMenu : generateHeaderMenu
+        generateHeaderMenu: generateHeaderMenu
     };
 }();
