@@ -13,7 +13,9 @@ var indexPage = function newsFeed() {
     }
 
     function getTournaments() {
-
+        var notifications = readData(generateTournamentNotifications);
+        var divElement = document.getElementById("tournament_notifications");
+        notifications.map(presentTournament).forEach(div => { divElement.appendChild(div); });
     }
 
     function presentSession(notification) {
@@ -54,7 +56,29 @@ var indexPage = function newsFeed() {
     }
 
     function presentTournament(notification) {
+        var notificationElement = document.createElement("div");
+        notificationElement.setAttribute("class", "buble");
 
+        var game = createTitle(notification.game);
+        var creator = createField("Created by: " + notification.creator);
+        var prize = createField("Prize pool: " + notification.prize);
+        var rules = createField("Rules: " + notification.rules);
+        var location = createField("Place: " + notification.location);
+        var date = createField("At: " + notification.time);
+        var description = createField(notification.description);
+        var hasOrHave = notification.participants.length > 1 ? " have " : " has ";
+        var participants = createField(stringifyParticipants(notification.participants) + hasOrHave + "decided to join");
+
+        notificationElement.appendChild(game);
+        notificationElement.appendChild(creator);
+        notificationElement.appendChild(prize);
+        notificationElement.appendChild(location);
+        notificationElement.appendChild(date);
+        notificationElement.appendChild(rules);
+        notificationElement.appendChild(participants);
+        notificationElement.appendChild(description);
+
+        return notificationElement;
     }
 
     function stringifyParticipants(participants) {
@@ -87,7 +111,6 @@ var indexPage = function newsFeed() {
         fieldDiv.innerText = fieldText;
         return fieldDiv;
     }
-
 
     function readData(generationFunction) {
         // This would normally call a REST API, but for the prototipe we are using a provider function;
@@ -155,7 +178,7 @@ var indexPage = function newsFeed() {
         return JSON.stringify(events);
     }
 
-    function generateTournaments() {
+    function generateTournamentNotifications() {
         var tournments = [
             {
                 "description": "Dixit tournament",
