@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game On</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="inner-background">
+      <div>
+        <h1>Create new session:</h1>
+        <form id="sessionInputForm">
+
+          <div class="form-group">
+            <label for="gameLocation">Location</label>
+             <select class="form-control" id="sessionLocationInput">
+              <option value="TriteTrola">Trite trola</option>
+              <option value="Abordage">Abordage</option>
+              <option value="FMI100">FMI 100</option>
+            </select> 
+          </div>
+
+          <div class="form-group">
+            <label for="gameType">Game type</label>
+             <select class="form-control" id="sessionTypeInput">
+              <option value="Catan">Catan</option>
+              <option value="Smallworld">Smallworld</option>
+              <option value="Belot">Belot</option>
+            </select> 
+          </div>
+
+          <div class="form-group">
+            <label for="sessionDescInput">Description</label>
+            <input type="text" class="form-control" id="sessionDescInput" placeholder="Describe the gaming session ...">
+          </div>
+
+          <button type="submit" class="button">Add</button>
+    	</form>
+    	</div>
+    </div>
+</body>
+
+</html>
