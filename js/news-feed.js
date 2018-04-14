@@ -129,6 +129,40 @@ var mainPage = function newsFeed() {
         return JSON.stringify(notifications);
     }
 
+    function generateTournaments() {
+        var tournments = [
+            {
+                "description": "Dixit tournament",
+                "creator": "Aleksandar",
+                "participants": ["Gosho", "Tosho", "Pesho"],
+                "location": "FMI 100",
+                "time": "2018-04-12 12:30:00",
+                "prizes": "1 000 000 000 000  BGN",
+                "game": "Catan",
+                "rules": "First to 100 points wins"
+            }, {
+                "description": "Mafia tournament",
+                "creator": "Ivan",
+                "participants": ["Ceci", "Peci"],
+                "location": "Trite trola",
+                "time": "2018-04-20 17:00:00",
+                "game": "Mafia",
+                "prizes": "smile on the radio",
+                "rules": "Last man standing"
+            }, {
+                "description": "Smallworld world cup",
+                "creator": "Viktor",
+                "participants": ["Viktor"],
+                "location": "Abordage",
+                "time": "2018-04-19 12:30:00",
+                "game": "Small world",
+                "prizes": "None",
+                "rules": "Very strict"
+            }
+        ];
+        return JSON.stringify(tournments);
+    }
+
     return {
         getNotifications: getNotifications,
         getEvents : getEvents,
