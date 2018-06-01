@@ -13,7 +13,7 @@ class NavigationBar extends Component {
   render() {
     return (
       <div>
-        <Sidebar width='wide' as={Menu} animation='push' direction='top' visible={this.state.visible} inverted>
+        <Sidebar width='wide' as={Menu} direction='top' visible={this.state.visible} inverted>
             <Button.Group widths='5' color="blue">
                 <NavigationButton  name="Home"/>
                 <NavigationButton  name="Clubs"/>

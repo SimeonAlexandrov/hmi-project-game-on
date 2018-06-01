@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavigationBar from '../common/NavigationBar'
-class HomePage extends Component {
+
+class ClubsPage extends Component {
     constructor(props) {
         super(props)
         
@@ -11,9 +12,6 @@ class HomePage extends Component {
         <div>
             <div>
                 <NavigationBar />
-                <div>
-                    Home
-                </div>
             </div>
         </div>
     );   
@@ -21,4 +19,4 @@ class HomePage extends Component {
 
 }
 
-export default HomePage;
+export default ClubsPage;
