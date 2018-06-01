@@ -11,7 +11,7 @@ class HomePage extends Component {
         <div>
             <div>
                 <NavigationBar />
-                <div>
+                <div className="content">
                     Home
                 </div>
             </div>
