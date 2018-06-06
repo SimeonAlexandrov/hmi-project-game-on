@@ -10,6 +10,11 @@ class NavigationBar extends Component {
       this.state = { visible: true }
   }
 
+  // shouldComponentUpdate() {
+  //   window.location.reload()
+  //   return true
+  // }
+
   render() {
     return (
       <div>
