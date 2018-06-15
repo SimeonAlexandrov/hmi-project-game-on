@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import NavigationBar from '../common/NavigationBar'
+import { Header, Segment } from 'semantic-ui-react'
 import '../../style/general.css'
+import { getClubs } from '../../actions/clubs.actions'
+import  Club  from './Club'
 class ClubsPage extends Component {
     constructor(props) {
         super(props)
         
-        this.state = {term: ''}
+        this.state = {
+            clubs: getClubs()
+        } 
     }
     render() {
     return (
@@ -13,7 +18,15 @@ class ClubsPage extends Component {
             <div>
                 <NavigationBar />
                 <div className="content">
-                    Clubs
+                <Header>Clubs</Header>
+                {
+                    this.state.clubs.map((club) => {
+                        console.log(club)
+                        return (
+                          <Club key={club.name.trim()} club={club} />
+                        )
+                    })
+                }
                 </div>
             </div>
         </div>
