@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Segment } from 'semantic-ui-react'
-class Bubble extends Comment {
+class Bubble extends Component {
     render() {
         return(
-            <Segment>
-                {this.props}
-            </Segment>
+            <div>
+                  hello
+            </div>
         )
     }
 }
