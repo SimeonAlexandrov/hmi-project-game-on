@@ -2,7 +2,7 @@ export function getSessions() {
     return [
             {
                 game: 'Catan',
-                autor: 'Bacho Kolio',
+                author: 'Bacho Kolio',
                 place: 'Trite trola',
                 from: '123',
                 to: '456',
@@ -23,19 +23,49 @@ export function getSessions() {
 }
 
 export function getTournaments() {
-    return {
-        promos: [
-
-        ]
-    }
+    return [
+        {
+            game: 'Catan',
+            author: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+            description: 'best catan party ever'
+        },{
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+        },{
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+        }
+    ]
 }
 
 export function getPromos() {
-    return {
-        tournaments: [
-            
-        ]
-    }
+    return [
+        {
+            game: 'Catan',
+            author: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+            description: 'best catan party ever'
+        },{
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+        },{
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+        }
+    ]
 
 }
 

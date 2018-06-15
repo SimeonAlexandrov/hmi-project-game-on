@@ -36,16 +36,16 @@ class HomePage extends Component {
                         <Grid.Column>
                             {this.state.sessions.map((session) => {
                                 return (
-                                    <Bubble />
+                                    <Bubble session={session}/>
                                 )
                             })
                             }
                         </Grid.Column>
+
                         <Grid.Column>
-                            Promos
                         </Grid.Column>
                         <Grid.Column>
-                            Tournaments
+
                         </Grid.Column>
                         </Grid.Row>
                     </Grid>       
