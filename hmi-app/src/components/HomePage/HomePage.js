@@ -9,7 +9,9 @@ class HomePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            sessions: getSessions()
+            sessions: getSessions(),
+            promos: getPromos(),
+            tournaments: getTournaments()
         }
     }
     render() {
@@ -34,18 +36,31 @@ class HomePage extends Component {
 
                         <Grid.Row>
                         <Grid.Column>
-                            {this.state.sessions.map((session) => {
-                                return (
-                                    <Bubble session={session}/>
-                                )
-                            })
+                            {
+                                this.state.sessions.map((session) => {
+                                    return (
+                                        <Bubble session={session}/>
+                                    )
+                                })
                             }
                         </Grid.Column>
-
                         <Grid.Column>
+                        {
+                            this.state.promos.map((promo) => {
+                                return (
+                                    <Bubble promo={promo}/>
+                                )
+                            })
+                        }
                         </Grid.Column>
                         <Grid.Column>
-
+                        {
+                            this.state.tournaments.map((tournament) => {
+                                return (
+                                    <Bubble tournament={tournament}/>
+                                )
+                            })
+                        }
                         </Grid.Column>
                         </Grid.Row>
                     </Grid>       

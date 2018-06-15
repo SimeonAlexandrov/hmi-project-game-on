@@ -31,16 +31,6 @@ export function getTournaments() {
             from: '123',
             to: '456',
             description: 'best catan party ever'
-        },{
-            autor: 'Bacho Kolio',
-            place: 'Trite trola',
-            from: '123',
-            to: '456',
-        },{
-            autor: 'Bacho Kolio',
-            place: 'Trite trola',
-            from: '123',
-            to: '456',
         }
     ]
 }
@@ -64,15 +54,17 @@ export function getPromos() {
             place: 'Trite trola',
             from: '123',
             to: '456',
+        }, {
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
+        }, {
+            autor: 'Bacho Kolio',
+            place: 'Trite trola',
+            from: '123',
+            to: '456',
         }
     ]
 
 }
-
-// export default  function homePageActions() {
-//     return {
-//         sessions: getSessions(),
-//         tournaments: getTournaments(), 
-//         promos: getPromos()
-//     }
-// }

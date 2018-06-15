@@ -24,19 +24,55 @@ class Bubble extends Component {
     }
 
     renderPromoDetails() {
-        
+        let promo = this.props.promo
+        return ( 
+            <Segment piled>
+                Created by: {promo.author}
+                <br/>
+                Game: {promo.game}
+                <br/>
+                Place: {promo.place}
+                <br/>
+                From: {promo.from}
+                <br/>
+                To: {promo.to}
+                <br/>
+                Description: {promo.description}
+                <br/>
+                <Button> Join </Button> 
+            </Segment>
+           
+        )
     }
 
     renderTournamentDetails() {
-        
+        let tournament = this.props.tournament
+        return ( 
+            <Segment piled>
+                Created by: {tournament.author}
+                <br/>
+                Game: {tournament.game}
+                <br/>
+                Place: {tournament.place}
+                <br/>
+                From: {tournament.from}
+                <br/>
+                To: {tournament.to}
+                <br/>
+                Description: {tournament.description}
+                <br/>
+                <Button> Join </Button> 
+            </Segment>
+           
+        )
     }
 
     render() {
         return(
             <div>
                   {this.props.session ? this.renderSessionDetails() : ''}
-                  {this.props.promo ? this.renderSessionDetails() : ''}
-                  {this.props.tournament ? this.renderSessionDetails() : ''}
+                  {this.props.promo ? this.renderPromoDetails() : ''}
+                  {this.props.tournament ? this.renderTournamentDetails() : ''}
             </div>
         )
     }
