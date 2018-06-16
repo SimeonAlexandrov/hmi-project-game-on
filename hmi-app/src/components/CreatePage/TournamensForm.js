@@ -2,25 +2,18 @@ import React, { Component } from 'react'
 import { Dropdown, Form, Segment } from 'semantic-ui-react'
 
 import { getClubs } from '../../actions/clubs.actions'
+import { getGameNames } from '../../actions/games.actions'
 import '../../style/general.css'
 
-class LocationDropdown extends Component {
+class FormDropdown extends Component {
     constructor(props){
         super(props);
     }
 
-    getClubNames() { 
-        return this.props.clubs.map((club) => {
-            var value = {key:club.name, value: club.name, text: club.name}
-            return value;
-    });
-    }
-
     render(){
-        const columnNames = this.getClubNames()
         return (
-            <Segment>
-                 <Dropdown placeholder='Location' options={columnNames}/>
+            <Segment inverted color='teal'>
+                 <Dropdown placeholder={this.props.placeholder} options={this.props.options} fluid={true}/>
             </Segment>
         );
     }
@@ -28,12 +21,26 @@ class LocationDropdown extends Component {
 
 class TournamentsForm extends Component {
 
+    clubNamesDropdown() { 
+            return getClubs().map((club) => {
+                var value = {text: club.name}
+                return value;
+        });
+    }
+
+    gameNamesDropdown() { 
+            return getGameNames().map((game) => {
+                var value = {text: game}
+                return value;
+        });
+    }
+    
     render(){
         return (
-            <Segment className = "centered-content" inverted color='black' compact={true} size='huge'>
+            <Segment className = "centered-content" inverted color='grey' compact={true} size='huge'>
                 <Form  widths='equal' color = 'teal'>
-                        <LocationDropdown clubs={getClubs()}/>
-                        <Form.Input color = 'teal' label='Game' />
+                        <FormDropdown placeholder='Location' options={this.clubNamesDropdown()}/>
+                        <FormDropdown placeholder='Games' options={this.gameNamesDropdown()}/>
                         <Form.Input color = 'teal' label='Date' />
                         <Form.Input color = 'teal' label='From' />
                         <Form.Input color = 'teal' label='Description' />
