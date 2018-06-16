@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Segment, Header } from 'semantic-ui-react'
+import { Button, Segment, Header, Icon } from 'semantic-ui-react'
 class Bubble extends Component {
     renderSessionDetails() {
         let session = this.props.session
@@ -8,16 +8,14 @@ class Bubble extends Component {
                 <Header as='h2' attached='top'>
                     {session.game}
                 </Header>
-                <Segment attached padded>
-                    Created by: {session.author}
+                <Segment attached className='bubble'>
+                    <Icon  name='user' /> {session.author}
                     <br/>
-                    Place: {session.place}
+                    <Icon name='map marker alternate' /> {session.place}
                     <br/>
-                    From: {session.from}
+                    <Icon name='clock outline' /> {session.from} - {session.to} 
                     <br/>
-                    To: {session.to}
-                    <br/>
-                    Description: {session.description}
+                    <Icon name='clipboard outline' /> {session.description}
                     <br/>
                     <Button> Join </Button> 
                 </Segment>

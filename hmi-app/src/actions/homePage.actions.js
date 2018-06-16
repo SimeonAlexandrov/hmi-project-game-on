@@ -10,12 +10,14 @@ export function getSessions() {
                 description: 'best catan party ever'
             },{
                 id: '2',
+                game: 'Svarka',
                 autor: 'Bacho Kolio',
                 place: 'Trite trola',
                 from: '123',
                 to: '456',
             },{
                 id: '3',
+                game: 'Belotec',
                 autor: 'Bacho Kolio',
                 place: 'Trite trola',
                 from: '123',
