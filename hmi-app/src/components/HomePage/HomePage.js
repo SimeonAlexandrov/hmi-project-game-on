@@ -17,20 +17,26 @@ class HomePage extends Component {
     render() {
     return (
         <div>
-            <div>
+            <div >
                 <NavigationBar />
                 <div className="content">
                     <Header>Home</Header>
                     <Grid columns={3} divided>
                         <Grid.Row>
                         <Grid.Column>
-                            Sessions {/* Some special stylingfor the first row*/}
+                        <Header as='h3' block>
+                            Sessions
+                        </Header>
                         </Grid.Column>
                         <Grid.Column>
+                        <Header as='h3' block>
                             Promos
+                        </Header>
                         </Grid.Column>
                         <Grid.Column>
+                        <Header as='h3' block>
                             Tournaments
+                        </Header>
                         </Grid.Column>
                         </Grid.Row>
 
@@ -39,7 +45,7 @@ class HomePage extends Component {
                             {
                                 this.state.sessions.map((session) => {
                                     return (
-                                        <Bubble session={session}/>
+                                        <Bubble key={session.id} session={session}/>
                                     )
                                 })
                             }
@@ -48,7 +54,7 @@ class HomePage extends Component {
                         {
                             this.state.promos.map((promo) => {
                                 return (
-                                    <Bubble promo={promo}/>
+                                    <Bubble key={promo.id} promo={promo}/>
                                 )
                             })
                         }
@@ -57,7 +63,7 @@ class HomePage extends Component {
                         {
                             this.state.tournaments.map((tournament) => {
                                 return (
-                                    <Bubble tournament={tournament}/>
+                                    <Bubble key={tournament.id} tournament={tournament}/>
                                 )
                             })
                         }
