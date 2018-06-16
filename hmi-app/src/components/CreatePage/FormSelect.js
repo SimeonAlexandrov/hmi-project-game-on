@@ -4,9 +4,6 @@ import { Form, Segment } from 'semantic-ui-react'
 import '../../style/general.css'
 
 class FormSelect extends Component {
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return (

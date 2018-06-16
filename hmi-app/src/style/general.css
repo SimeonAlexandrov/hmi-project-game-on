@@ -1,13 +1,13 @@
 .content {
-    margin: 100px
+    margin-top: 100px;
 }
 
 .centered-content {
     text-align: center;
     left: 30%;
-    width: 40%;
-    margin: 100px;
+    width: 40%;    
 }
+
 .all {
     background-image: url('../images/background.jpg');
 }

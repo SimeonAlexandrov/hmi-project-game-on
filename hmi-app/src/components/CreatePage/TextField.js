@@ -5,14 +5,10 @@ import '../../style/general.css'
 
 class TextField extends Component {
 
-    constructor(props){
-        super(props);
-    }
-
     render(){
         return (
             <Segment inverted color='teal' textAlign='center'>
-                <Form.Input label={this.props.label} required={false || this.props.required} icon={this.props.icon} fluid={true}/>
+                <Form.Input placeholder={this.props.placeholder} label={this.props.label} required={false || this.props.required} icon={this.props.icon} fluid={true}/>
             </Segment>
         )
     }

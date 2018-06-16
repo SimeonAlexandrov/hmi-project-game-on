@@ -12,10 +12,6 @@ import '../../style/general.css'
 
 class TournamentsForm extends Component {
 
-    constructor(props){
-        super(props)
-    }
-
     clubNamesDropdown() { 
             return getClubs().map((club) => {
                 var value = {kkey:club.name, value:club.name, text: club.name}
@@ -32,14 +28,14 @@ class TournamentsForm extends Component {
     
     render(){
         return (
-            <Segment className = "centered-content" inverted color='black' compact={true} size='huge'>
+            <Segment className = "centered-content" inverted color='grey' compact={true} size='huge'>
                 <Form  widths='equal' color = 'teal'>
                         <FormSelect label='Location' placeholder='Location' options={this.clubNamesDropdown()}/>
                         <FormSelect label='Game Type' placeholder='Games' options={this.gameNamesDropdown()}/>
                         <DateTimeField/>
-                        <TextField label='Description' icon='clipboard outline'/>
-                        <TextField label='Rules' icon='ban' required/>
-                        <TextField label='Prizes' icon='trophy' required/>
+                        <TextField placeholder='Tournament rules' label='Rules' icon='ban' required/>
+                        <TextField placeholder='Prices' label='Prizes' icon='trophy' required/>
+                        <TextField placeholder='Additional tournament info' label='Description' icon='clipboard'/>
                         <Form.Button color = 'teal' content='CREATE'/>
                 </Form>
             </Segment>
