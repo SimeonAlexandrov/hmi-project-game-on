@@ -41,7 +41,6 @@ class NavigationButton extends Component {
 
     render() {
         if (this.state.redirect) {
-            console.log('bbbbbbbb')
             return <Redirect to={this.selectRoute()} />;
         }
         return (

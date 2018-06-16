@@ -1,32 +1,34 @@
 import React, { Component } from 'react'
-import { Button, Segment } from 'semantic-ui-react'
+import { Button, Segment, Header } from 'semantic-ui-react'
 class Bubble extends Component {
     renderSessionDetails() {
         let session = this.props.session
-        return ( 
-            <Segment piled>
-                Created by: {session.author}
-                <br/>
-                Game: {session.game}
-                <br/>
-                Place: {session.place}
-                <br/>
-                From: {session.from}
-                <br/>
-                To: {session.to}
-                <br/>
-                Description: {session.description}
-                <br/>
-                <Button> Join </Button> 
-            </Segment>
-           
+        return (
+            <div> 
+                <Header as='h2' attached='top'>
+                    {session.game}
+                </Header>
+                <Segment attached padded>
+                    Created by: {session.author}
+                    <br/>
+                    Place: {session.place}
+                    <br/>
+                    From: {session.from}
+                    <br/>
+                    To: {session.to}
+                    <br/>
+                    Description: {session.description}
+                    <br/>
+                    <Button> Join </Button> 
+                </Segment>
+           </div>
         )
     }
 
     renderPromoDetails() {
         let promo = this.props.promo
         return ( 
-            <Segment piled>
+            <Segment >
                 Created by: {promo.author}
                 <br/>
                 Game: {promo.game}
@@ -47,11 +49,13 @@ class Bubble extends Component {
 
     renderTournamentDetails() {
         let tournament = this.props.tournament
-        return ( 
-            <Segment piled>
+        return (
+            <div>
+            <Header as='h2' attached='top'>
+                {tournament.game}
+            </Header>
+            <Segment attached padded>
                 Created by: {tournament.author}
-                <br/>
-                Game: {tournament.game}
                 <br/>
                 Place: {tournament.place}
                 <br/>
@@ -63,7 +67,7 @@ class Bubble extends Component {
                 <br/>
                 <Button> Join </Button> 
             </Segment>
-           
+           </div>
         )
     }
 

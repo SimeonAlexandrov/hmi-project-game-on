@@ -15,7 +15,7 @@ class CreatePage extends Component {
                 <NavigationBar />
                 <div className="content">
                 <Header>Create</Header>
-                    <div class="ui center aligned segment">
+                    <div className="ui center aligned segment">
                         <Button.Group >
                             <Button >Tournament</Button>
                             <Button>Session</Button>
