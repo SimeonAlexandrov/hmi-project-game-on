@@ -4,7 +4,6 @@ import { Header, Grid } from 'semantic-ui-react'
 import NavigationBar from '../common/NavigationBar'
 import Bubble from './Bubble'
 import { getSessions, getPromos, getTournaments} from '../../actions/homePage.actions'
-
 class HomePage extends Component {
     constructor(props) {
         super(props)
@@ -16,12 +15,12 @@ class HomePage extends Component {
     }
     render() {
     return (
-        <div>
+        <div >
             <div >
                 <NavigationBar />
                 <div className="content">
                     <Header>Home</Header>
-                    <Grid columns={3} divided>
+                    <Grid columns={3} divided className='home'>
                         <Grid.Row>
                         <Grid.Column>
                         <Header as='h3' block>
