@@ -3,7 +3,8 @@ import { Form, Segment } from 'semantic-ui-react'
 
 import '../../style/general.css'
 
-class FormDropdown extends Component {
+class TextField extends Component {
+
     constructor(props){
         super(props);
     }
@@ -11,10 +12,10 @@ class FormDropdown extends Component {
     render(){
         return (
             <Segment inverted color='teal' textAlign='center'>
-                 <Form.Dropdown label={this.props.label} placeholder={this.props.placeholder} options={this.props.options} required={true}/>
+                <Form.Input label={this.props.label} required={false || this.props.required} icon={this.props.icon} fluid={true}/>
             </Segment>
-        );
+        )
     }
 }
 
-export default FormDropdown;
+export default TextField;
