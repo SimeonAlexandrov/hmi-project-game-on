@@ -19,7 +19,7 @@ class NavigationBar extends Component {
     return (
       <div>
         <Sidebar width='wide' as={Menu} direction='top' visible={this.state.visible} inverted>
-            <Button.Group widths='5' color="blue">
+            <Button.Group widths='5' color="teal">
                 <NavigationButton  name="Home"/>
                 <NavigationButton  name="Clubs"/>
                 <NavigationButton  name="Create"/>
