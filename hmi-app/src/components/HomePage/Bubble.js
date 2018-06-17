@@ -7,7 +7,7 @@ class Bubble extends Component {
     render() {
         return(
             <div>
-                <Header as='h2' attached='top' color='teal' inverted>
+                <Header as='h2' attached='top' color='teal' inverted className='home-element'>
                     {this.props.content.game}
                 </Header>
                 <Segment attached className='bubble' inverted color='grey'>
@@ -17,7 +17,8 @@ class Bubble extends Component {
                     {this.props.content.prizes ? (<BubbleDetail iconName='trophy' value={this.props.content.prizes}/>) : ''}
                     {this.props.content.rules ? (<BubbleDetail iconName='law' value={this.props.content.rules}/>) : ''}
                     {this.props.content.description ? (<BubbleDetail iconName='clipboard outline' value={this.props.content.description}/>) : ''}
-                    <Button color='teal' inverted> Join </Button> 
+                    <br/>
+                    <Button color='teal' inverted className="fluid ui button"> Join </Button>
                 </Segment>
                 <br/>
             </div>
