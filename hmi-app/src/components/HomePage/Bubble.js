@@ -1,80 +1,25 @@
 import React, { Component } from 'react'
 import { Button, Segment, Header, Icon } from 'semantic-ui-react'
+
+import BubbleDetail from './BubbleDetail'
 class Bubble extends Component {
-    renderSessionDetails() {
-        let session = this.props.session
-        return (
-            <div> 
-                <Header as='h2' attached='top'>
-                    {session.game}
-                </Header>
-                <Segment attached className='bubble'>
-                    <Icon  name='user' /> {session.author}
-                    <br/>
-                    <Icon name='map marker alternate' /> {session.place}
-                    <br/>
-                    <Icon name='clock outline' /> {session.from} - {session.to} 
-                    <br/>
-                    <Icon name='clipboard outline' /> {session.description}
-                    <br/>
-                    <Button> Join </Button> 
-                </Segment>
-           </div>
-        )
-    }
-
-    renderPromoDetails() {
-        let promo = this.props.promo
-        return ( 
-            <Segment >
-                Created by: {promo.author}
-                <br/>
-                Game: {promo.game}
-                <br/>
-                Place: {promo.place}
-                <br/>
-                From: {promo.from}
-                <br/>
-                To: {promo.to}
-                <br/>
-                Description: {promo.description}
-                <br/>
-                <Button> Join </Button> 
-            </Segment>
-           
-        )
-    }
-
-    renderTournamentDetails() {
-        let tournament = this.props.tournament
-        return (
-            <div>
-            <Header as='h2' attached='top'>
-                {tournament.game}
-            </Header>
-            <Segment attached padded>
-                Created by: {tournament.author}
-                <br/>
-                Place: {tournament.place}
-                <br/>
-                From: {tournament.from}
-                <br/>
-                To: {tournament.to}
-                <br/>
-                Description: {tournament.description}
-                <br/>
-                <Button> Join </Button> 
-            </Segment>
-           </div>
-        )
-    }
 
     render() {
         return(
             <div>
-                  {this.props.session ? this.renderSessionDetails() : ''}
-                  {this.props.promo ? this.renderPromoDetails() : ''}
-                  {this.props.tournament ? this.renderTournamentDetails() : ''}
+                <Header as='h2' attached='top' color='teal' inverted>
+                    {this.props.content.game}
+                </Header>
+                <Segment attached className='bubble' inverted color='grey'>
+                    {this.props.content.author ? (<BubbleDetail iconName='user' value={this.props.content.author}/>) : ''}
+                    {this.props.content.place ? (<BubbleDetail iconName='map marker alternate' value={this.props.content.place}/>) : ''}
+                    {this.props.content.time ? (<BubbleDetail iconName='clock outline' value={this.props.content.time}/>) : ''}
+                    {this.props.content.prizes ? (<BubbleDetail iconName='trophy' value={this.props.content.prizes}/>) : ''}
+                    {this.props.content.rules ? (<BubbleDetail iconName='law' value={this.props.content.rules}/>) : ''}
+                    {this.props.content.description ? (<BubbleDetail iconName='clipboard outline' value={this.props.content.description}/>) : ''}
+                    <Button color='teal' inverted> Join </Button> 
+                </Segment>
+                <br/>
             </div>
         )
     }

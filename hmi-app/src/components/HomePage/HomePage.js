@@ -3,6 +3,7 @@ import { Header, Grid } from 'semantic-ui-react'
 
 import NavigationBar from '../common/NavigationBar'
 import Bubble from './Bubble'
+import HomeHeader from './HomeHeader'
 import { getSessions, getPromos, getTournaments} from '../../actions/homePage.actions'
 class HomePage extends Component {
     constructor(props) {
@@ -19,23 +20,16 @@ class HomePage extends Component {
             <div >
                 <NavigationBar />
                 <div className="content">
-                    <Header>Home</Header>
                     <Grid columns={3} divided className='home'>
                         <Grid.Row>
                         <Grid.Column>
-                        <Header as='h3' block>
-                            Sessions
-                        </Header>
+                            <HomeHeader title='Sessions' />
                         </Grid.Column>
                         <Grid.Column>
-                        <Header as='h3' block>
-                            Promos
-                        </Header>
+                            <HomeHeader title='Promos' />
                         </Grid.Column>
                         <Grid.Column>
-                        <Header as='h3' block>
-                            Tournaments
-                        </Header>
+                            <HomeHeader title='Tournaments' />
                         </Grid.Column>
                         </Grid.Row>
 
@@ -44,7 +38,7 @@ class HomePage extends Component {
                             {
                                 this.state.sessions.map((session) => {
                                     return (
-                                        <Bubble key={session.id} session={session}/>
+                                        <Bubble key={session.id} content={session}/>
                                     )
                                 })
                             }
@@ -53,7 +47,7 @@ class HomePage extends Component {
                         {
                             this.state.promos.map((promo) => {
                                 return (
-                                    <Bubble key={promo.id} promo={promo}/>
+                                    <Bubble key={promo.id} content={promo}/>
                                 )
                             })
                         }
@@ -62,7 +56,7 @@ class HomePage extends Component {
                         {
                             this.state.tournaments.map((tournament) => {
                                 return (
-                                    <Bubble key={tournament.id} tournament={tournament}/>
+                                    <Bubble key={tournament.id} content={tournament}/>
                                 )
                             })
                         }
