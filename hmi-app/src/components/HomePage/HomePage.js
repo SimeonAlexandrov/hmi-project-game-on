@@ -19,7 +19,7 @@ class HomePage extends Component {
         <div >
             <div >
                 <NavigationBar />
-                <div className="content">
+                <div className="page-content">
                     <Grid columns={3} divided className='home'>
                         <Grid.Row>
                         <Grid.Column>

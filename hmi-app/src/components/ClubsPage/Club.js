@@ -7,14 +7,21 @@ class Club extends Component {
         return (
             <Segment inverted color='grey'>
                <Grid columns={3} divided>
-                <Grid.Row>
+                <Grid.Row className="club-row">
                     <Grid.Column width={4}>
-                        <Image size='small' src={this.props.club.imageSrc} alt="club image" centered className='club-image' circular/>
+                        <Image size='small' src={this.props.club.imageSrc} alt="club image" centered className="club-image" circular/>
                     </Grid.Column>
                     <Grid.Column width={8}>
                         <Segment inverted color='grey' className='home-element'>
                             <Header inverted color='teal' size='huge'>{this.props.club.name}</Header>
                         </Segment>
+                        {
+                            this.props.club.description ? 
+                            (<Segment inverted color='teal' textAlign='center'>
+                            {this.props.club.description }
+                            </Segment>) :
+                            ''
+                        }
                         <br/>
                         Working hours: {this.props.club.from} - {this.props.club.to}
                         <br/>

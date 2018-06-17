@@ -17,7 +17,7 @@ class ClubsPage extends Component {
         <div>
             <div>
                 <NavigationBar />
-                <div className="content">
+                <div className="page-content">
                 {
                     this.state.clubs.map((club) => {
                         return (
