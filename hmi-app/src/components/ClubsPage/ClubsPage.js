@@ -20,7 +20,6 @@ class ClubsPage extends Component {
                 <div className="content">
                 {
                     this.state.clubs.map((club) => {
-                        console.log(club)
                         return (
                           <Club key={club.name.trim()} club={club} />
                         )

@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Header } from 'semantic-ui-react'
+import { Segment, Grid, Header, Rating, Image } from 'semantic-ui-react'
 
+import SimpleMap from './Map'
 class Club extends Component {
     render() {
         return (
-            <Segment>
+            <Segment inverted color='grey'>
                <Grid columns={3} divided>
                 <Grid.Row>
-                    <Grid.Column>
-                        <img className="ui small image" src="/images/wireframe/image.png" alt="club image"/>
+                    <Grid.Column width={4}>
+                        <Image size='small' src={this.props.club.imageSrc} alt="club image" centered className='club-image' circular/>
                     </Grid.Column>
-                    <Grid.Column>
-                        <Header>{this.props.club.name}</Header>
+                    <Grid.Column width={8}>
+                        <Segment inverted color='grey' className='home-element'>
+                            <Header inverted color='teal' size='huge'>{this.props.club.name}</Header>
+                        </Segment>
                         <br/>
                         Working hours: {this.props.club.from} - {this.props.club.to}
+                        <br/>
+                        <Rating icon='star' defaultRating={3} maxRating={5} />
                     </Grid.Column>
-                    <Grid.Column>
-                        google maps
+                    <Grid.Column width={4}>
+                        <SimpleMap club={this.props.club} />
                     </Grid.Column>
                 </Grid.Row>
                </Grid>

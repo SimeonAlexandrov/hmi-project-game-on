@@ -1,5 +1,7 @@
 .content {
-    margin: 100px;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .centered-content {
@@ -18,4 +20,21 @@
 
 .home-element {
     text-align: center
+}
+
+.club-image {
+    margin-right: 10px;
+    position: relative;
+    margin-top: 2px;
+    height: 100px;
+}
+
+.gmap {
+    height: 100%;  
+    width: 100%;  
+}
+
+.pointer {
+    font-weight: bold;
+    color: black
 }
