@@ -62,14 +62,14 @@ export function getPromos() {
     return [
         {
             id: '1',
-            autor: 'Alex Maksimov',
+            author: 'Alex Maksimov',
             place: 'Trite trola',
             time: `${moment().add(1, 'days').add(2,'hours').calendar()}`,
             game: 'Battle Bunnies',
             description: 'Presentation of the game Battle Bunnies!. Everybody is welcomed!',
         }, {
             id: '2',
-            autor: 'Kristian Petrov',
+            author: 'Kristian Petrov',
             place: 'Aborgage',
             time: `${moment().add(1, 'days').calendar()}`,
             game: 'Belot Battle Royale',
