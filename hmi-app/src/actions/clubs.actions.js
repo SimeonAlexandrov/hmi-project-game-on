@@ -6,7 +6,7 @@ export function getClubs() {
             to: '19',
             popularGame: 'catan',
             imageSrc: 'http://festival.zdravei.org/wp-content/uploads/2017/11/13087820_505945606255506_5386507322007207284_n-295x305.jpg',
-            description: 'В board game bar „Трите трола“ разполагаме с близо 400 настолни игри (предимно за възрастни, но имаме и детски заглавия) – тематични, стратегически, парти, картови, всякакви. Имаме и над 30 вида бира с цени от 2.50 до 6 лв. освен всичките алкохоли, вина, безалкохолни и топли напитки, че и пакетирани гризинки. Атмосферата е уютна, а персоналът е приятелски усмихнат и готов да помогне с игрите, ако пък не ти се цъка точно днес – имаме и собствена малка библиотечка с интересни книги', 
+            description: 'Ther are more than 400 board games at Trite trola bar (mostly for adults, however there are a few for children). All types of board games are present - strategic, party, cards, fantasy. In addition, Trite trola offers more than 30 types of beer along with various types of wine, soft drink, etc. The atmosphere is inviting and the place also offers a small collection of books for those who are not really in the mood for board games.', 
             center: {
                 lat: 42.7006522,
                 lng: 23.3255508
@@ -18,7 +18,7 @@ export function getClubs() {
             to: '20',
             popularGame: 'dixit',
             imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSHIihM6lu0LyAvIJ-98HaP-erZI_eXNueCQfM12tBFrbz31u2',
-            description: 'Board game cafe “Абордаж” е място с приятелска атмосфера и приятна среда за ценителите на различните и качествени преживявания. Заповядайте!',
+            description: 'Board game cafe “Abordage” is a place for the people who enjoy to spend their time playing board games.',
             center: {
                 lat: 42.6933008,
                 lng: 23.3502791
@@ -33,7 +33,8 @@ export function getClubs() {
             center: {
                 lat: 42.6743729,
                 lng: 23.3282929
-            }
+            },
+            description: 'FMI-100 is the board games club in the Faculty of Mathematics and Informatics to Sofia University.'
         }
     ]
 }

@@ -32,7 +32,7 @@ class CreateMenu extends Component {
   
     render() {
         return (
-            <div className="content">
+            <div className="page-content">
                 <ButtonsHeader handleButton={this.handleButton}/>
                 {this.pickForm()}
             </div>
